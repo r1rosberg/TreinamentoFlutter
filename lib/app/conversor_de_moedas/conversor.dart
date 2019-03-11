@@ -1,8 +1,7 @@
 import 'dart:convert';
-//import 'dart:async';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:async/async.dart';
 
 /* json editor online 
    https://jsoneditoronline.org/
@@ -13,12 +12,12 @@ import 'package:async/async.dart';
    http: ^0.12.0+1
 */
 
-void Tteste() async {
+Future<Map> getData() async {
   const String url_request =
       'https://api.hgbrasil.com/finance/quotations?format=json&key=60df7606';
   var response = await http.get(url_request);
 
-  print(json.decode(response.body));
+  return json.decode(response.body);
 
   //http.get(url_request).then((val) {
   //  print(val.body);
@@ -28,7 +27,7 @@ void Tteste() async {
 class Conversor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Tteste();
+    print(getData());
     return _Conversor();
     /* MaterialApp(
       title: 'Conversor de Moeda',
