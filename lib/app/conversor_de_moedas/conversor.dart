@@ -59,7 +59,7 @@ class _ConversorState extends State<_Conversor> {
         title: Text('Conversor de Moeda'),
       ),
       body: Column(
-        children: <Widget>[TextField(decoration: ,),],  
+        //children: <Widget>[TextField(decoration: ,),],  
       ),
     );
   }

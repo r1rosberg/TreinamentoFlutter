@@ -3,7 +3,7 @@ import 'package:english_words/english_words.dart';
 
 //void main() => runApp(new MyApp());
 
-class LstInfFavorito_ex01 extends StatelessWidget {
+class LstInfFavoritoEx01 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
