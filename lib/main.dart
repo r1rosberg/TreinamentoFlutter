@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-import './app/main_ControlePessoa_ex1.dart';
-import './app/main_CauculadoraIMC_ex2.dart';
-import './app/conversor_de_moedas/conversor.dart';
+import 'app/main_ControlePessoa_ex1.dart';
+import 'app/main_CauculadoraIMC_ex2.dart';
+import 'app/conversor_de_moedas/conversor.dart';
 
-import './app/main_LstInfFavorito_ex01.dart';
-import './app/main_ListaInfinita_ex02.dart';
+import 'app/main_LstInfFavorito_ex01.dart';
+import 'app/main_ListaInfinita_ex02.dart';
 
-import './app/drawer_customizado/drawer-customizado-widget.dart';
-import './app/bloc/bloc_flutter1/bloc_flutter1.dart';
+import 'app/drawer_customizado/drawer-customizado-widget.dart';
+import 'app/bloc/bloc_flutter1/bloc_flutter1.dart';
 
-import './app/animação/clap_widget.dart';
-import './app/menu_circular_red/menu-circular-red.dart';
+import 'app/animação/clap_widget.dart';
+import 'app/menu_circular_red/menu-circular-red.dart';
+import 'app/flutter_offline/flutter-offline.dart';
+import 'app/slide_show/slide-show.dart';
 
 main() {
   runApp(MaterialApp(
@@ -34,6 +36,8 @@ main() {
       '/BlocFlutter1': (BuildContext context) => BlocFlutter1(),
       '/ClapWidget': (BuildContext context) => ClapWidget(),      
       '/MenuCircularRed': (BuildContext context) => MenuCircularRed(),
+      '/FlutterOffline': (BuildContext context) => FlutterOffline(),
+      '/SlideShow': (BuildContext context) => SlideShow(),
     },
   ));
 }
@@ -69,6 +73,7 @@ class _MyAppState extends State<MyApp> {
           _listTile('Lista Infivita', '/ListaInfinitaEx02'),
           _listTile('Lista Infivita Favorito', '/LstInfFavoritoEx01'),
           _listTile('Menu / Drawer Customizado', '/DrawerCustomizadoWidget'),
+          _listTile('Slide Show', '/SlideShow'),
           Divider(),
           _listTile('Bloc 001', '/BlocFlutter1'),
           Divider(),
@@ -77,6 +82,8 @@ class _MyAppState extends State<MyApp> {
           _listTile('Conversor De Moedas', '/Conversor'),
           _listTile('Clap', '/ClapWidget'),
           _listTile('Menu Circular Red', '/MenuCircularRed'),
+          Divider(),
+          _listTile('flutter_offline', '/FlutterOffline'),
         ],
       );
     }
