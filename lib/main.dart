@@ -1,3 +1,6 @@
+import 'package:flutter/foundation.dart'
+    show debugDefaultTargetPlatformOverride;
+
 import 'package:flutter/material.dart';
 
 import 'app/main_ControlePessoa_ex1.dart';
@@ -15,7 +18,12 @@ import 'app/menu_circular_red/menu-circular-red.dart';
 import 'app/flutter_offline/flutter-offline.dart';
 import 'app/slide_show/slide-show.dart';
 
+import 'app/dog_http/dog_main.dart';
+import 'app/imc_anime/imc_anime.dart';
+
 main() {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  
   runApp(MaterialApp(
     title: 'Programas Curso Flutter.',
     home: Teste(),
@@ -38,6 +46,9 @@ main() {
       '/MenuCircularRed': (BuildContext context) => MenuCircularRed(),
       '/FlutterOffline': (BuildContext context) => FlutterOffline(),
       '/SlideShow': (BuildContext context) => SlideShow(),
+      
+      '/DogMain': (BuildContext context) => DogMain(),
+      '/ImcAnime': (BuildContext context) => ImcAnime(),
     },
   ));
 }
@@ -84,6 +95,9 @@ class _MyAppState extends State<MyApp> {
           _listTile('Menu Circular Red', '/MenuCircularRed'),
           Divider(),
           _listTile('flutter_offline', '/FlutterOffline'),
+          
+          _listTile('ImcAnime', '/ImcAnime'),
+          _listTile('DogMain', '/DogMain'),
         ],
       );
     }

@@ -24,6 +24,7 @@ dependencies:
   bloc_pattern: ^1.5.2
   rxdart: ^0.21.0
   flutter_offline : " ^ 0.2.4 "
+  flutter_svg: ^0.12.0
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,13 @@ flutter:
     - images/restaurante.jpg
     - images/clap.png
     - images/bird.jpg
+    - images/femenine.svg
+    - images/gender.svg
+    - images/masculine.svg
+    - images/arrow.svg
+    - images/drop.svg
+    - images/person.svg
+    - images/pacman.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -75,3 +83,24 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+  fonts:
+    - family: SF Pro Display
+      fonts:
+        - asset: fonts/SF-Pro-Display-UltralightItalic.otf
+          weight: 100
+        - asset: fonts/SF-Pro-Display-Thin.otf
+          weight: 200
+        - asset: fonts/SF-Pro-Display-Light.otf
+          weight: 300
+        - asset: fonts/SF-Pro-Display-Regular.otf
+          weight: 400
+        - asset: fonts/SF-Pro-Display-Medium.otf
+          weight: 500
+        - asset: fonts/SF-Pro-Display-Semibold.otf
+          weight: 600
+        - asset: fonts/SF-Pro-Display-Bold.otf
+          weight: 700
+        - asset: fonts/SF-Pro-Display-Heavy.otf
+          weight: 800
+        - asset: fonts/SF-Pro-Display-Black.otf
+          weight: 900
